@@ -10,11 +10,10 @@ class BooksController < ApplicationController
 
   def create
     book = Book.new(book_params)
-    puts book_params
+
     if book.save
       render json: book, status: 201, location: book
     else
-      puts book.errors
       render json: book.errors, status: 422
     end
   end
