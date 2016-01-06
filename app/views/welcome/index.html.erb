@@ -1,4 +1,15 @@
-<h2>Hello World</h2>
+<h1>Reading List API</h1>
 <p>
-  The time is now: <%= Time.now %>
+<pre>
+  <h3>The following commands are available to you:</h3>
+
+  Prefix Verb   URI Pattern               Controller#Action
+                 root GET    /                         welcome#index
+                books GET    /books(.:format)          books#index
+                      POST   /books(.:format)          books#create
+                 book DELETE /books/:id(.:format)      books#destroy
+       finished_books GET    /finished_books(.:format) finished_books#index
+</pre>
 </p>
+
+ <a href="https://github.com/jonassvalin/ReadingList">Source code</a>
