@@ -8,4 +8,12 @@ class ActiveSupport::TestCase
   fixtures :all
 
   # Add more helper methods to be used by all tests here...
+
+  def json(body)
+    JSON.parse(body)
+  end
+
+  def xml(body)
+    Hash.from_xml(body)
+  end
 end
