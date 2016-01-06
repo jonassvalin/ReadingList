@@ -1,28 +1,12 @@
-== README
+#Eventure
+This is a simple reading list built using a Ruby on Rails RESTful API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##Copyright disclaimer
+This website was built in educational purposes and is not meant to infringe on any copyrights or be monetized in
+any way. If any of the image resources belong to you and you want them to remove, please let me know.
 
-Things you may want to cover:
+##TODO
+- Lots of things
 
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+##See
+[Here!](https://rocky-plains-7849.herokuapp.com/)
