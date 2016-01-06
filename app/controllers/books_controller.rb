@@ -10,14 +10,22 @@ class BooksController < ApplicationController
 
   def create
     book = Book.new(book_params)
+    puts book_params
     if book.save
       render json: book, status: 201, location: book
     else
+      puts book.errors
       render json: book.errors, status: 422
     end
   end
 
+  def destroy
+    book = Book.find(params[:id])
+    book.destroy!
+    render nothing: true, status: 204
+  end
+
   def book_params
-    params.require(:book).permit(:title, :rating, :finished_at)
+    params.require(:book).permit(:title, :rating, :finished_at, :author, :genre_id, :review, :amazon_id)
   end
 end

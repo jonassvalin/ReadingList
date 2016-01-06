@@ -3,7 +3,7 @@ require 'test_helper'
 class ListingBooksTest < ActionDispatch::IntegrationTest
   setup do
     Book.create!(title: 'Pragramatic Programmer', rating: 5)
-    Book.create!(title: "rEnder's Game", rating: 4)
+    Book.create!(title: "Ender's Game", rating: 4)
   end
 
   test 'Listing books' do
@@ -12,7 +12,7 @@ class ListingBooksTest < ActionDispatch::IntegrationTest
     assert_equal 200, response.status
     assert_equal Mime::JSON, response.content_type
 
-    assert_equal Book.count, json(response.body).size
+    assert_equal Book.count, json(response.body)[:books].size
   end
 
   test 'Lists top rated books' do
@@ -21,6 +21,6 @@ class ListingBooksTest < ActionDispatch::IntegrationTest
     assert_equal 200, response.status
     assert_equal Mime::JSON, response.content_type
 
-    assert_equal 1, json(response.body).size
+    assert_equal 1, json(response.body)[:books].size
   end
 end

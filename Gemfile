@@ -48,3 +48,5 @@ end
 ruby '2.2.1'
 
 gem 'puma'
+
+gem 'active_model_serializers'
