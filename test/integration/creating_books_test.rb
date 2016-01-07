@@ -9,7 +9,7 @@ class CreatingBooksTest < ActionDispatch::IntegrationTest
     review = 'Excellent book for any programmer.'
     amazon_id = 13123
 
-    post '/books', { book: {
+    post '/api/books', { book: {
       title: title,
       rating: rating,
       author: author,
@@ -22,7 +22,7 @@ class CreatingBooksTest < ActionDispatch::IntegrationTest
     assert_equal Mime::JSON, response.content_type
 
     book = json(response.body)[:book]
-    assert_equal book_url(book[:id]), response.location
+    assert_equal api_book_url(book[:id]), response.location
 
     assert_equal title, book[:title]
     assert_equal rating, book[:rating].to_i
@@ -37,7 +37,7 @@ class CreatingBooksTest < ActionDispatch::IntegrationTest
     title = nil
     rating = 5
 
-    post '/books', { book: {
+    post '/api/books', { book: {
       title: title,
       rating: rating
     } }.to_json, { 'Accept' => 'application/json', 'Content-Type' => 'application/json' }

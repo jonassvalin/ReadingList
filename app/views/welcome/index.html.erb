@@ -3,14 +3,20 @@
 <pre>
   <h3>The following commands are available to you:</h3>
 
-        Prefix Verb   URI Pattern               Controller#Action
-          root GET    /                         welcome#index
-         books GET    /books(.:format)          books#index
-               POST   /books(.:format)          books#create
-          book DELETE /books/:id(.:format)      books#destroy
-finished_books GET    /finished_books(.:format) finished_books#index
-        genres GET    /genres(.:format)         genres#index
+  Prefix Verb   URI Pattern                   Controller#Action
+              root GET    /                             welcome#index
+         api_books GET    /api/books(.:format)          api/books#index
+                   POST   /api/books(.:format)          api/books#create
+          api_book DELETE /api/books/:id(.:format)      api/books#destroy
+api_finished_books GET    /api/finished_books(.:format) api/finished_books#index
+        api_genres GET    /api/genres(.:format)         api/genres#index
 </pre>
+</p>
+
+<p>
+For example, to see all books currently available, run:
+<br>
+<i>"curl https://rocky-plains-7849.herokuapp.com/books"</i>
 </p>
 
  <a href="https://github.com/jonassvalin/ReadingList">Source code</a>
