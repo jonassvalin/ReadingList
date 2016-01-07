@@ -1,9 +1,11 @@
 #Eventure
-This is a simple reading list built using a Ruby on Rails RESTful API
+This is a simple reading list API built using Ruby on Rails
 
 ##Copyright disclaimer
-This website was built in educational purposes and is not meant to infringe on any copyrights or be monetized in
-any way. If any of the image resources belong to you and you want them to remove, please let me know.
+This API was built in educational purposes and is not meant to infringe on any copyrights or be monetized in
+any way. If any of the resources belong to you and you want them to remove, please let me know.
+
+Inspired by codeschool "Surviving APIs with Rails"
 
 ##TODO
 - Lots of things
